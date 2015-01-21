@@ -1,0 +1,47 @@
+<!-- -*- mode: XML -*- -->
+<sdf version='1.4'>
+  <model name='elevator'>
+      <static>1</static>
+      <link name='link'>
+        <inertial>
+          <mass>1</mass>
+        </inertial>
+        <collision name='back'>
+          <pose>0 0.005 0.6 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>2 0.01 2.5</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='visual1'>
+          <pose>0 0.005 0.6 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>2 0.01 2.5</size>
+            </box>
+          </geometry>
+        <material>
+          <script>
+            <uri>model://elevator/materials/scripts</uri>
+            <uri>model://elevator/materials/textures</uri>
+            <name>elevator/Diffuse</name>
+          </script>
+        </material>
+        </visual>
+      </link>
+      <pose>4.44782 3 0 0 -0 0</pose>
+    </model>
+    
+
+</sdf>
