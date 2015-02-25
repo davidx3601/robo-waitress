@@ -944,14 +944,14 @@
         xyz="3.72403910764429E-08 0.0148725895621533 0.0333609018907974"
         rpy="0 0 0" />
       <mass
-        value="0.0111981711598486" />
+        value="0.111981711598486" />
       <inertia
-        ixx="0.000486392340366094"
+        ixx="0.00486392340366094"
         ixy="4.20757000035677E-12"
         ixz="-3.91843889020299E-06"
-        iyy="0.000211170064630335"
+        iyy="0.00211170064630335"
         iyz="2.79335159568522E-12"
-        izz="0.000437528795624211" />
+        izz="0.00437528795624211" />
     </inertial>
     <visual>
       <origin
@@ -988,10 +988,10 @@
     <child
       link="komodo_left_finger_link" />
     <axis
-      xyz="1 0 0" />
+      xyz="-1 0 0" />
     <limit
-      lower="-3.14"
-      upper="3.14"
+      lower="-0.1"
+      upper="1.57"
       effort="10"
       velocity="0" />
   </joint>
@@ -1002,14 +1002,14 @@
         xyz="3.72403914095099E-08 -0.0148725895621533 0.0333609018907972"
         rpy="0 0 0" />
       <mass
-        value="0.0111981711598486" />
+        value="0.111981711598486" />
       <inertia
-        ixx="0.000486392340366094"
+        ixx="0.00486392340366094"
         ixy="4.20757000035677E-12"
         ixz="-3.91843889020299E-06"
-        iyy="0.000211170064630335"
+        iyy="0.00211170064630335"
         iyz="2.79335159568522E-12"
-        izz="0.000437528795624211" />
+        izz="0.00437528795624211" />
     </inertial>
     <visual>
       <origin
@@ -1046,10 +1046,10 @@
     <child
       link="komodo_right_finger_link" />
     <axis
-      xyz="1 0 0" />
+      xyz="-1 0 0" />
     <limit
-      lower="-3.14"
-      upper="3.14"
+      lower="-1.57"
+      upper="0.1"
       effort="10"
       velocity="0" />
   </joint>
@@ -1330,7 +1330,9 @@
 
   <transmission name="tran1">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="komodo_FR_Wheel_joint"/>
+    <joint name="komodo_FR_Wheel_joint">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
     <actuator name="motor1">
       <hardwareInterface>EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
@@ -1339,7 +1341,9 @@
 
   <transmission name="tran2">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="komodo_FL_Wheel_joint"/>
+    <joint name="komodo_FL_Wheel_joint">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
     <actuator name="motor2">
       <hardwareInterface>EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
@@ -1348,7 +1352,9 @@
 
   <transmission name="tran3">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="komodo_RR_Wheel_joint"/>
+    <joint name="komodo_RR_Wheel_joint">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
     <actuator name="motor3">
       <hardwareInterface>EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
@@ -1357,7 +1363,9 @@
 
   <transmission name="tran4">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="komodo_RL_Wheel_joint"/>
+    <joint name="komodo_RL_Wheel_joint">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
     <actuator name="motor4">
       <hardwareInterface>EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>

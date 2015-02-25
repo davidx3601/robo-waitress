@@ -3,6 +3,11 @@ ROS hydro + gazebo 1.9.6  OR  ROS indigo + gazebo 2.2
 
 we assume this repository was cloned into the catkin workspace ad there are no other Robotican packages.
 
+PRE INSTALLATION:
+sudo apt-get install ros-indigo-move-base
+sudo apt-get install ros-indigo-ros-control ros-indigo-ros-controllers
+sudo apt-get install ros-indigo-gazebo-ros-control
+
 note:
 For now, it is a copy/paste repository of the "Robotican" repository with an added package named "komodo_gazebo" and a new URDF file of the komodo written to loaunch the komodo in Gazebo Simulator (located in ric_description\komodo\komodo_elevator.URDF).
 
