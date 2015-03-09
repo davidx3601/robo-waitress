@@ -64,13 +64,13 @@
       <direction>-0.5 0.1 -0.9</direction>
     </light>
 
-     
+  <!--   
     <include>
       <uri>model://elevator</uri>
       <name>elevator</name>
       <pose>4 1 0 0 0 0</pose>
     </include>
-     
+ -->    
     <include>
       <uri>model://bookshelf</uri>
       <name>bookshelf</name>

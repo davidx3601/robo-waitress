@@ -29,7 +29,5 @@
   <!-- ros_control clam launch file -->
   <include file="$(find komodo_gazebo)/launch/komodo_control.launch" />
 
- <!--node name="RateToEffort" pkg="rate2effort" type="rate2effort" cwd="node" output="screen" /--> 
-
 </launch>
 
